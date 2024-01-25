@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block styles %}
+
+{% endblock %}
+
+{% block main %}
+
+<h1>{{ film.title }}</h1>
+
+<img src="{{ film.img.url }}" alt="Котик">
+
+<p>
+    {{ film.description }}
+</p>
+
+{% endblock %}

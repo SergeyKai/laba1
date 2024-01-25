@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+
+{% block styles %}
+
+
+{% endblock %}
+
+{% block main %}
+
+<h1> Список Фильмов</h1>
+
+<ul>
+    {% for film in film_list %}
+    <li>
+        <img src="{{ film.img.url }}" alt="Котик">
+
+        <a href="{% url 'film_detail' film.pk %}">
+            <h2>
+                {{ film.title }}
+            </h2>
+        </a>
+
+        <p>
+            {{ film.description }}
+        </p>
+
+    </li>
+    {% endfor %}
+
+</ul>
+
+{% endblock %}
